@@ -1,0 +1,3 @@
+[submodule "EnumCollections"]
+	path = EnumCollections
+	url = ./EnumCollections
