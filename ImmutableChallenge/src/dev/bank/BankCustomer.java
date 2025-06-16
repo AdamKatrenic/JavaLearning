@@ -12,7 +12,7 @@ public class BankCustomer {
     private final int customerId;
     private final List<BankAccount> accounts = new ArrayList<>();
 
-    public BankCustomer(String name, double checkingAmount, double savingsAmount) {
+    BankCustomer(String name, double checkingAmount, double savingsAmount) {
         this.name = name;
         this.customerId = lastCustomerId++;
         accounts.add(new BankAccount(BankAccount.AccountType.CHECKING, checkingAmount));

@@ -26,8 +26,13 @@ public class BankAccount {
         return balance;
     }
 
-    public Map<Long, Transaction> getTransactions() {
-        return Map.copyOf(transactions);
+    public Map<Long, String> getTransactions() {
+
+        Map<Long, String> txMap = new LinkedHashMap<>();
+        for (var tx : transactions.entrySet()) {
+            txMap.put(tx.getKey(), tx.getValue().toString());
+        }
+        return txMap;
     }
 
     @Override
@@ -35,7 +40,7 @@ public class BankAccount {
         return "%s $%.2f".formatted(accountType, balance);
     }
 
-    public void commitTransaction(int routingNumber, long transactionId,
+    void commitTransaction(int routingNumber, long transactionId,
                            String customerId, double amount) {
 
         balance += amount;
