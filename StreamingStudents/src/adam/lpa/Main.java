@@ -1,9 +1,11 @@
 package adam.lpa;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -151,10 +153,19 @@ public class Main {
         System.out.println("longTerm students? " + longTermCount);
 
         System.out.println();
-        List<Student> longTimeLearners = Arrays.stream(students)
+        var longTimeLearners = Arrays.stream(students)
                 .filter(s -> (s.getAge() - s.getAgeEnrolled() >= 7) && (s.getMonthsSinceActive() < 12))
                 .filter(s -> !s.hasProgrammingExperience())
                 .limit(5)
-                .toList();
+                .toArray(Student[]::new);
+
+        var learners = Arrays.stream(students)
+                .filter(s -> (s.getAge() - s.getAgeEnrolled() >= 7) && (s.getMonthsSinceActive() < 12))
+                .filter(s -> !s.hasProgrammingExperience())
+                .limit(5)
+                .collect(Collectors.toList());
+
+        Collections.shuffle(learners);
     }
+
 }
