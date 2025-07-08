@@ -1,0 +1,5 @@
+Directory Contents: 
+C:\Users\Adam\Desktop\Adamove-Kody\DirectoryFileChallenge\public\assets\icons
+C:\Users\Adam\Desktop\Adamove-Kody\DirectoryFileChallenge\public\assets\icons\index.txt
+C:\Users\Adam\Desktop\Adamove-Kody\DirectoryFileChallenge\public\assets\icons\indexCopy.txt
+Generated: 2025-07-08T15:27:58.120957800
