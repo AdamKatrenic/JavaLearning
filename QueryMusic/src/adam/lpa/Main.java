@@ -2,7 +2,6 @@ package adam.lpa;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
 
-import javax.sql.DataSource;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -11,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
+import java.util.Scanner;
 
 public class Main {
 
@@ -23,15 +23,29 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        String albumName = "Tapestry";
-
-        String query = "SELECT * FROM music.albumview WHERE album_name='%s'"
-                .formatted(albumName);
 
         var dataSource = new MysqlDataSource();
         dataSource.setServerName(prop.getProperty("serverName"));
         dataSource.setPort(Integer.parseInt(prop.getProperty("port")));
         dataSource.setDatabaseName(prop.getProperty("databaseName"));
+        try {
+            dataSource.setMaxRows(10);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        String query = "SELECT * FROM music.artists limit 10";
+
+//        String query = """
+//            WITH RankedRows AS (
+//                                SELECT *,
+//                                ROW_NUMBER() OVER (ORDER BY artist_id) AS row_num
+//                                FROM music.artists
+//                            )
+//                            SELECT *
+//                                FROM RankedRows
+//                            WHERE row_num <= 10""";
 
         try (var connection = dataSource.getConnection(
                 prop.getProperty("user"),
@@ -41,12 +55,7 @@ public class Main {
             ResultSet resultSet = statement.executeQuery(query);
 
             var meta = resultSet.getMetaData();
-            for (int i = 1; i <= meta.getColumnCount(); i++) {
-                System.out.printf("%d %s %s %n",
-                        i,
-                        meta.getColumnName(i),
-                        meta.getColumnTypeName(i));
-            }
+
             System.out.println("=".repeat(100));
 
             for (int i = 1; i <= meta.getColumnCount() ; i++) {
