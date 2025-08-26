@@ -1,0 +1,74 @@
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<StackPane fx:controller="org.example.demo.HelloController" xmlns:fx="http:javafx.com/fxml">
+    <Button text="Tlačidlo jedna" style="-fx-background-color: red"/>
+    <Label text="Label text" style="-fx-background-color: green"/>
+    <Label text="Druhý Label text" style="-fx-background-color: blue"/>
+</StackPane>
+
+
+
+
+<!--<?import javafx.scene.layout.FlowPane?>-->
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.layout.TilePane?>-->
+<!--<TilePane fx:controller="org.example.demo.HelloController" xmlns:fx="http:javafx.com/fxml">-->
+
+<!--    <Button text="Tlačidlo jedna"/>-->
+<!--    <Button text="Tlačidlo dva"/>-->
+<!--    <Button text="Tlačidlo tri"/>-->
+<!--    <Button text="Tlačidlo štyri"/>-->
+<!--    <Button text="Tlačidlo päť"/>-->
+<!--    <Button text="Tlačidlo šesť"/>-->
+<!--    <Button text="Tlačidlo sedem"/>-->
+<!--    <Button text="Tlačidlo osem"/>-->
+<!--    <Button text="Tlačidlo deväť"/>-->
+<!--    <Button text="Tlačidlo desať"/>-->
+
+<!--</TilePane>-->
+
+
+
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<!--<?import javafx.geometry.Insets?>-->
+<!--<?import javafx.scene.control.Button?>-->
+<!--<?import javafx.scene.layout.HBox?>-->
+<!--<?import javafx.scene.layout.BorderPane?>-->
+<!--<?import javafx.scene.control.Label?>-->
+
+<!--<BorderPane fx:controller="org.example.demo.HelloController" xmlns:fx="http:javafx.com/fxml">-->
+
+<!--    <top>-->
+<!--        <Label text="Tento Label je v hornej pozícii" alignment="CENTER"-->
+<!--               BorderPane.alignment="CENTER"-->
+<!--        style="-fx-border-color: blue; -fx-border-width: 3; -fx-border-style: dashed"/>-->
+<!--    </top>-->
+
+<!--    <center>-->
+<!--        <Label text="Tento Label je v strednej pozícii a má fakt že dlhýýýýýýýýýýýýýýýý text" alignment="CENTER"/>-->
+<!--    </center>-->
+
+<!--    <left>-->
+<!--        <Label text="Tento Label je v ľavej pozícii" alignment="CENTER"/>-->
+<!--    </left>-->
+
+<!--    <right>-->
+<!--        <Label text="Tento Label je v pravej pozícii" alignment="CENTER"/>-->
+<!--    </right>-->
+
+<!--    <bottom>-->
+<!--        <HBox spacing="10" alignment="TOP_RIGHT">-->
+<!--            <padding>-->
+<!--                <Insets bottom="10" right="10"/>-->
+<!--            </padding>-->
+<!--            <Button text="Okay" prefWidth="90"/>-->
+<!--            <Button text="Cancel" prefWidth="90"/>-->
+<!--            <Button text="Help" prefWidth="90"/>-->
+<!--        </HBox>-->
+<!--    </bottom>-->
+
+<!--</BorderPane>-->
