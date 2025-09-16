@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<first_name>Adam</first_name>
+	<last_name>Katrenič</last_name>
+	<phone_number>0940590502</phone_number>
+	<notes>Adamov Kontakt</notes>
+</contact>
+<contact>
+	<first_name>Lea</first_name>
+	<last_name>Voláková</last_name>
+	<phone_number>123456</phone_number>
+	<notes>Milujem ťa</notes>
+</contact>
+<contact>
+	<first_name>Gabika</first_name>
+	<last_name>Niregyhaza</last_name>
+	<phone_number>54656465321</phone_number>
+	<notes>Som z maďarska</notes>
+</contact>
+</contacts>
