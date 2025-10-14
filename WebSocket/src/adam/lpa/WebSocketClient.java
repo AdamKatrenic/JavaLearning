@@ -18,7 +18,7 @@ public class WebSocketClient {
 
         HttpClient client = HttpClient.newHttpClient();
         WebSocket webSocket = client.newWebSocketBuilder()
-                .buildAsync(new URI("ws://localhost:8080?name=%s".formatted(name)),
+                .buildAsync(new URI("wss://b7c2-85-135-19-101.ngrok-free.app/?name=%s".formatted(name)),
                         new WebSocket.Listener() {
                             @Override
                             public CompletionStage<?> onText(WebSocket webSocket, CharSequence data, boolean last) {
