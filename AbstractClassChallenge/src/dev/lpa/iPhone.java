@@ -8,6 +8,6 @@ public class iPhone extends ProductForSale{
 
     @Override
     public void showDetails() {
-        System.out.println("Iphone " + type + " stojí " + price + " a je vo farbe: " + description);
+        System.out.println("Iphone " + type + " stojí " + price + " €" + " a je vo farbe: " + description);
     }
 }

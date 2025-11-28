@@ -7,6 +7,6 @@ public class Samsung extends ProductForSale{
 
     @Override
     public void showDetails() {
-        System.out.println("Samsung " + type + " stojí " + price + " a je vo farbe: " + description);
+        System.out.println("Samsung " + type + " stojí " + price + " €" + " a je vo farbe: " + description);
     }
 }

@@ -7,7 +7,7 @@ public class Huawei extends ProductForSale{
 
     @Override
     public void showDetails() {
-        System.out.println("Huawei " + type + " stojí " + price + " a je vo farbe: " + description);
+        System.out.println("Huawei " + type + " stojí " + price + " €" + " a je vo farbe: " + description);
 
     }
 }
