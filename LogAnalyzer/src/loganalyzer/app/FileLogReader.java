@@ -2,33 +2,27 @@ package loganalyzer.app;
 
 import loganalyzer.filters.LogFilter;
 import loganalyzer.parser.LogParser;
+import loganalyzer.model.LogRecord;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class FileLogReader {
 
-    public static void readFile(String fileName, LogFilter filter) {
-
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-
-            String line;
-
-            while ((line = br.readLine()) != null) {
-
-                LogParser.parseLine(line).ifPresent(record -> {
-
-                    if (filter == null || filter.accept(record)) {
-                        System.out.println("PASSED : " + record);
-                    } else  {
-                        System.out.println("FAILED : " + record);
-                    }
-                });
-            }
-        }catch (Exception e) {
-            System.out.println("ERROR WHILE READING FILE");
-            e.printStackTrace();
+    public static List<LogRecord> readFile(String fileName, LogFilter filter) {
+        try {
+            return Files.lines(Paths.get(fileName)) // Stream<String>
+                    .map(LogParser::parseLine)     // Stream<Optional<LogRecord>>
+                    .filter(Optional::isPresent)   // iba validné riadky
+                    .map(Optional::get)            // Stream<LogRecord>
+                    .filter(record -> filter == null || filter.accept(record))
+                    .collect(Collectors.toList()); // výsledok ako List<LogRecord>
+        } catch (IOException e) {
+            throw new RuntimeException("Error while reading file", e);
         }
-
     }
 }

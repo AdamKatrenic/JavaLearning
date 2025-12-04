@@ -9,4 +9,12 @@ public interface LogFilter {
     default LogFilter and(LogFilter other) {
         return record -> this.accept(record) && other.accept(record);
     }
+
+    default LogFilter or(LogFilter other) {
+        return record -> this.accept(record) || other.accept(record);
+    }
+
+    default LogFilter not(LogFilter other) {
+        return record -> !this.accept(record);
+    }
 }

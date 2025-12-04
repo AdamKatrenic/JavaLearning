@@ -4,5 +4,99 @@
 2025-12-03T19:05:01 | WARN | PaymentService | Slow response 850ms
 2025-12-03T18:59:00 | ERROR | AuthService | Invalid password for user 456
 2025-12-03T20:00:00 | ERROR | OrderService | Order 987 failed validation
-malformed line that should be skipped
 2025-12-03T18:15:10 | ERROR | AuthService | Invalid password for user 123
+2025-12-03T20:10:00 | INFO | InventoryService | Stock check completed
+2025-12-03T20:15:00 | WARN | InventoryService | Low stock for item 555
+2025-12-03T20:20:00 | ERROR | InventoryService | Failed to update stock for item 777
+2025-12-03T20:25:00 | INFO | PaymentService | Payment processed for order 654
+2025-12-03T20:30:00 | ERROR | PaymentService | Invalid credit card number
+2025-12-03T20:35:00 | WARN | AuthService | Multiple failed login attempts
+2025-12-03T20:40:00 | INFO | OrderService | Order 999 placed successfully
+2025-12-03T20:45:00 | ERROR | OrderService | Order 1001 failed validation
+2025-12-03T20:50:00 | INFO | AuthService | User 789 logged in
+2025-12-03T20:55:00 | WARN | PaymentService | Payment delayed 1200ms
+2025-12-03T21:00:00 | ERROR | PaymentService | Payment gateway unreachable
+2025-12-03T21:05:00 | INFO | InventoryService | Item 888 restocked
+2025-12-03T21:10:00 | ERROR | InventoryService | Database connection lost
+malformed line missing separators
+2025-12-03T21:15:00 | INFO | AuthService | User 321 logged out
+2025-12-03T21:20:00 | WARN | OrderService | Order 1002 took too long
+2025-12-03T21:25:00 | ERROR | OrderService | Order 1003 failed validation
+2025-12-03T21:30:00 | INFO | PaymentService | Payment processed for order 1004
+2025-12-03T21:35:00 | ERROR | PaymentService | Payment gateway timeout
+2025-12-03T21:40:00 | WARN | InventoryService | Item 999 low stock
+2025-12-03T21:45:00 | INFO | AuthService | User 654 logged in
+2025-12-03T21:50:00 | ERROR | AuthService | Invalid password for user 654
+2025-12-03T21:55:00 | WARN | PaymentService | Payment delayed 900ms
+2025-12-03T22:00:00 | ERROR | OrderService | Order 1005 failed validation
+2025-12-03T22:05:00 | INFO | InventoryService | Item 777 restocked
+2025-12-03T22:10:00 | ERROR | InventoryService | Failed to update stock for item 888
+2025-12-03T22:15:00 | WARN | AuthService | Multiple failed login attempts
+2025-12-03T22:20:00 | INFO | PaymentService | Payment processed for order 1006
+2025-12-03T22:25:00 | ERROR | PaymentService | Invalid credit card number
+2025-12-03T22:30:00 | WARN | OrderService | Order 1007 took too long
+2025-12-03T22:35:00 | ERROR | OrderService | Order 1008 failed validation
+2025-12-03T22:40:00 | INFO | AuthService | User 987 logged in
+2025-12-03T22:45:00 | ERROR | AuthService | Invalid password for user 987
+2025-12-03T22:50:00 | WARN | PaymentService | Payment delayed 1100ms
+2025-12-03T22:55:00 | ERROR | PaymentService | Payment gateway unreachable
+2025-12-03T23:00:00 | INFO | InventoryService | Item 555 restocked
+2025-12-03T23:05:00 | ERROR | InventoryService | Database connection lost
+
+--- PRIDANÉ OD TOHTO BODU ---
+
+2025-12-03T23:10:00 | INFO | AuthService | User 111 logged in
+2025-12-03T23:11:00 | ERROR | AuthService | Invalid password for user 222
+2025-12-03T23:12:00 | WARN | AuthService | Multiple failed login attempts
+2025-12-03T23:13:00 | INFO | PaymentService | Payment processed for order 2001
+2025-12-03T23:14:00 | ERROR | PaymentService | Payment gateway timeout
+2025-12-03T23:15:00 | WARN | PaymentService | Slow response 780ms
+2025-12-03T23:16:00 | INFO | OrderService | Order 2002 placed successfully
+2025-12-03T23:17:00 | ERROR | OrderService | Order 2003 failed validation
+2025-12-03T23:18:00 | WARN | OrderService | Order 2004 took too long
+2025-12-03T23:19:00 | INFO | InventoryService | Item 123 restocked
+2025-12-03T23:20:00 | ERROR | InventoryService | Failed to update stock for item 222
+2025-12-03T23:21:00 | WARN | InventoryService | Low stock for item 333
+2025-12-03T23:22:00 | INFO | AuthService | User 444 logged in
+2025-12-03T23:23:00 | ERROR | AuthService | Invalid password for user 444
+2025-12-03T23:24:00 | INFO | PaymentService | Payment processed for order 2005
+2025-12-03T23:25:00 | ERROR | PaymentService | Invalid credit card number
+2025-12-03T23:26:00 | WARN | PaymentService | Payment delayed 650ms
+2025-12-03T23:27:00 | INFO | OrderService | Order 2006 placed successfully
+2025-12-03T23:28:00 | ERROR | OrderService | Order 2007 failed validation
+2025-12-03T23:29:00 | WARN | OrderService | Order 2008 took too long
+2025-12-03T23:30:00 | INFO | InventoryService | Stock check completed
+2025-12-03T23:31:00 | ERROR | InventoryService | Database connection lost
+2025-12-03T23:32:00 | WARN | InventoryService | Item 444 low stock
+2025-12-03T23:33:00 | INFO | AuthService | User 555 logged out
+2025-12-03T23:34:00 | ERROR | AuthService | Invalid password for user 555
+2025-12-03T23:35:00 | WARN | AuthService | Multiple failed login attempts
+2025-12-03T23:36:00 | INFO | PaymentService | Payment processed for order 2009
+2025-12-03T23:37:00 | ERROR | PaymentService | Payment gateway unreachable
+2025-12-03T23:38:00 | WARN | PaymentService | Payment delayed 1340ms
+2025-12-03T23:39:00 | INFO | OrderService | Order 2010 placed successfully
+2025-12-03T23:40:00 | ERROR | OrderService | Order 2011 failed validation
+2025-12-03T23:41:00 | WARN | OrderService | Order 2012 took too long
+2025-12-03T23:42:00 | INFO | InventoryService | Item 999 restocked
+2025-12-03T23:43:00 | ERROR | InventoryService | Failed to update stock for item 1000
+2025-12-03T23:44:00 | WARN | InventoryService | Low stock for item 1001
+2025-12-03T23:45:00 | INFO | AuthService | User 777 logged in
+2025-12-03T23:46:00 | ERROR | AuthService | Invalid password for user 777
+2025-12-03T23:47:00 | INFO | PaymentService | Payment processed for order 2013
+2025-12-03T23:48:00 | ERROR | PaymentService | Invalid credit card number
+2025-12-03T23:49:00 | WARN | PaymentService | Slow response 930ms
+2025-12-03T23:50:00 | INFO | OrderService | Order 2014 placed successfully
+2025-12-03T23:51:00 | ERROR | OrderService | Order 2015 failed validation
+2025-12-03T23:52:00 | WARN | OrderService | Order 2016 took too long
+2025-12-03T23:53:00 | INFO | InventoryService | Item 333 restocked
+2025-12-03T23:54:00 | ERROR | InventoryService | Database connection lost
+2025-12-03T23:55:00 | WARN | InventoryService | Item 555 low stock
+2025-12-03T23:56:00 | INFO | AuthService | User 888 logged in
+2025-12-03T23:57:00 | ERROR | AuthService | Invalid password for user 888
+2025-12-03T23:58:00 | INFO | PaymentService | Payment processed for order 2017
+2025-12-03T23:59:00 | ERROR | PaymentService | Payment gateway unreachable
+2025-12-04T00:00:00 | WARN | PaymentService | Payment delayed 1020ms
+2025-12-04T00:01:00 | INFO | OrderService | Order 2018 placed successfully
+2025-12-04T00:02:00 | ERROR | OrderService | Order 2019 failed validation
+malformed log entry incomplete timestamp
+2025-12-04T00:03:00 | WARN | OrderService | Order 2020 took too long
